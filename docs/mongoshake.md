@@ -44,7 +44,10 @@ firewall-cmd --reload
 
 **Step4: Start mongodb 3**
 
-`systemctl start mongod.service`
+```
+systemctl start mongod.service
+systemctl enable mongod.service
+```
 
 ## 2. Replicate set mongodb3 for mongoshake1
 
@@ -153,8 +156,11 @@ rm -rf /root/mongo-shake
 ## 3. Setup mongo-shake
 
 - Download mongo-shake
+
+```
 cd /root
 git clone https://github.com/aliyun/mongo-shake.git
+```
 
 - pull all dependencies & build collector
 
@@ -172,4 +178,5 @@ mongo_urls = mongodb://username:password@192.168.10.111:27017,192.168.10.112:270
 tunnel.address = mongodb://192.168.10.113:27017,192.168.10.114:27017
 
 - Usage mongo-shake
+
 `./bin/collector -conf=conf/collector.conf`
