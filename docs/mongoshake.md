@@ -173,9 +173,12 @@ cd /root/mongo-shake
 
 - Edit collector configuration file
 
-vi conf/collector.conf
-mongo_urls = mongodb://username:password@192.168.10.111:27017,192.168.10.112:27017
+Edit conf/collector.conf with the following content:
+
+```
+mongo_urls = mongodb://192.168.10.111:27017,192.168.10.112:27017
 tunnel.address = mongodb://192.168.10.113:27017,192.168.10.114:27017
+```
 
 - Usage mongo-shake
 
