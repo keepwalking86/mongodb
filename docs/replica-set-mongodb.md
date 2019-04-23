@@ -133,8 +133,8 @@ Cấu hình replica set trên primary (mongo01)
 MongoDB shell version v3.4.13
 connecting to: mongodb://127.0.0.1:27017
 >rs.initiate( { _id: "mongo_rep", members: [ { _id: 0, host: "mongo01:27017", priority: 2 } ] } )
->rs.add( { _id:2,host:"mongo02:27017",priority:1 } )
->rs.addArb( { _id:3,host:"mongo03:27017",priority:0 })
+>rs.add( { _id:1,host:"mongo02:27017",priority:1 } )
+>rs.addArb("mongo03:27017")
 ```
 
 ### <a name="Deploy-replica-set-access-control">2.3 Replica set MongoDB với access control</a>
